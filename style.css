@@ -1,0 +1,57 @@
+body {
+    text-align: center;
+    background-color: #085020;
+    background-image: url(img/image\ 1.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+.container{
+    max-width: 500px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+header{
+    font-size: larger;
+    color: rgb(233, 230, 227);
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
+
+.text-center{
+    color: white;
+}
+
+.d-flex{
+    display: flex;
+    align-content: space-around;
+    width: 450px;
+    height: 60px;
+}
+
+.todos li{
+    background-color: #fff;
+    color: black;
+    font-weight: bold;
+    transition: all 3s ease-in-out;
+    animation: skew, 3s ease-in-out;
+}
+
+.delete{
+    cursor: pointer;
+    color: red;
+}
+
+
