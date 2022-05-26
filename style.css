@@ -34,9 +34,27 @@ header{
     color: white;
 }
 
+.wrap1{
+    animation: showlist .5s linear alternate;
+    
+}
+
+@keyframes showlist{
+    0%{
+        transform: scale(0.7);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.error{
+    color: red;
+    font-size: large;
+}
+
+
 .d-flex{
-    display: flex;
-    align-content: space-around;
     width: 450px;
     height: 60px;
 }
@@ -45,8 +63,6 @@ header{
     background-color: #fff;
     color: black;
     font-weight: bold;
-    transition: all 3s ease-in-out;
-    animation: skew, 3s ease-in-out;
 }
 
 .delete{

@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- main-css    -->
     <link rel="stylesheet" href="style.css">
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -26,55 +28,39 @@
     </header>
     <div class="container">
         <h1 class="text-center mb-4">Alexis Todo List</h1>
-            <form class="d-flex my-4">
-                <input class="form-control  border-success" type="text" placeholder="Add" aria-label="Add">
+            <div class="d-flex my-4">
+                <input class="form-control  border-success" type="text" value="" placeholder="Add your list" aria-label="Add">
                 <button class="btn btn-success" type="submit">ADD</button>
                 
-            </form>
+            </div>
+        <div class="error">
+             
+        </div>
 
-        <ul class="list-group todos mx-auto text-light">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>Reading</span>
-                <i class="fa fa-trash-o delete"></i>
-            </li>
-        </ul>
-        <ul class="list-group todos mx-auto text-light">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>Gaming</span>
-                <i class="fa fa-trash-o delete"></i>
-            </li>
-           
-        </ul>
-        <ul class="list-group todos mx-auto text-light">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>Reading</span>
-                <i class="fa fa-trash-o delete"></i>
-            </li>
-           
-        </ul>
-        <ul class="list-group todos mx-auto text-light">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>Jogging</span>
-                <i class="fa fa-trash-o delete"></i>
-            </li>
-           
-        </ul>
-        <ul class="list-group todos mx-auto text-light">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>Dancing</span>
-                <i class="fa fa-trash-o delete"></i>
-            </li>
-           
-        </ul>
-        <ul class="list-group todos mx-auto text-light">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>Shopping</span>
-                <i class="fa fa-trash-o delete"></i>
-            </li>
-           
-        </ul>
+        <div class="center">
+            <div class="wrap1">
+                <ul class="list-group todos mx-auto text-light">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>Reading</span>
+                        <i class="fa fa-trash-o delete"></i>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>Gaming</span>
+                        <i class="fa fa-trash-o delete"></i>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>dancing</span>
+                        <i class="fa fa-trash-o delete"></i>
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div>
 
     </div>
+    
     <script src="app.js"></script>
 </body>
 </html>

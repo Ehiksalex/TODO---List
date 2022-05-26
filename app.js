@@ -1,31 +1,62 @@
-const buttons =  document.querySelector(".btn");
-const input = document.querySelector(".todos");
-
-buttons.addEventListener('submit',(e)  =>{
-    e.preventDefault();
-    const todo = buttons.add.value;
-
-    if(todo.length != 0){
-       newList(todo);
-        buttons.reset();
-    }else{
-        alert("please input task");
+//exit button
+function clearList(){
+    var clear = document.querySelectorAll('.delete');
+    for(let j = 0; j < clear.length; j++){
+        clear[j].addEventListener('click', function(){
+            clear[j].parentElement.remove();
+        
+    
+        })
     }
-});
-
-onclick="document.querySelector('d-flex').innerText = ;"
-
-function newList(todo) {
-    const html = `<li class="list-group-item d-flex justify-content-between align-items-center">
-        <span>${todo}</span>
-        <i class="fa fa-trash-o delete"></i>
-    </li>`;
-    input.innerHtml + html;
-
 }
 
-   input.addEventListener('click',(e) =>{
-        if(e.target.classList.contains('delete')){
-        e.target.parentElement.remove();
-       } 
-})
+clearList();
+
+    
+//adding a new list and creating error message
+var error = document.querySelector('.error')
+var myUl = document.getElementsByClassName('list');
+var btn = document.querySelector(".btn");
+var inputItem = document.querySelector(".form-control");
+    function newList(){
+        if(inputItem.value == 0){
+            error.innerHTML = "Input a list";
+    
+    
+        }
+        else{
+            var li = document.createElement("li");
+            var txtNode = document.createTextNode(inputItem.value);
+            li.appendChild(txtNode);
+            myUl.appendChild(li)
+            error.innerHTML = "";
+            inputItem.value = "";
+    
+    
+        }
+        clearList();
+        
+    }
+    //make the add button execute the addition of new list
+    
+    btn.addEventListener('click', newList);
+
+    
+    //make the enter key add a new list
+    document.addEventListener('keydown', function(e){
+    if(e.key == "Enter"){
+        newList();
+    }
+    })
+
+
+
+
+
+
+
+
+
+
+    
+ 
