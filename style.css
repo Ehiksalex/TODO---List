@@ -57,6 +57,7 @@ header{
 .d-flex{
     width: 450px;
     height: 60px;
+    
 }
 
 .todos li{
@@ -71,3 +72,14 @@ header{
 }
 
 
+/* RESPONSIVE */
+
+@media screen and (max-width:380px){
+    .container{
+        padding:30px 20px
+    }
+    .d-flex{
+        width:90%;
+    }
+
+}
